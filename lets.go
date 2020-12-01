@@ -1,10 +1,11 @@
 package main
 
-import "fmt"
-
+import (
+	"fmt"
+)
 func main() {
 
 	// TODO: EVERYTHING
 
-	fmt.Println("Hello, world.")
+	fmt.Println("Never mind...")
 }
