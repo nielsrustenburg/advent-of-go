@@ -41,7 +41,6 @@ func SolvePartOne(adapters []int) (int, []int){
 		diffs[diff] = diffs[diff]+1
 	}
 
-	fmt.Println(diffs)
 	return diffs[1] * diffs[3], adapters
 }
 
@@ -55,12 +54,10 @@ func SolvePartTwo(adapters []int)int{
 func SolveDynamically(index int, adapters []int, cache map[int]int)int{
 	cachedResult, exists := cache[index]
 	if(exists){
-		fmt.Println("EXISTS")
 		return cachedResult
 	}
 	result := 0
 	for i:= 1; i <= 3; i++{
-		fmt.Println(index+i)
 		fits := index+i < len(adapters) && adapters[index+i] - adapters[index] <= 3
 		if(fits){
 			result = result + SolveDynamically(index+i, adapters, cache)
