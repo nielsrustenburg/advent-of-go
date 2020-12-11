@@ -47,7 +47,6 @@ func SolvePartOne(adapters []int) (int, []int){
 func SolvePartTwo(adapters []int)int{
 	cache := make(map[int]int)
 	cache[len(adapters)-1] = 1 //The device has only one way of connecting to the next device (none)
-
 	return SolveDynamically(0, adapters, cache)
 }
 
