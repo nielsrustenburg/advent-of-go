@@ -7,8 +7,6 @@ import (
 	"strconv"
 )
 
-const floor,empty,taken = byte(46), byte(76), byte(35)
-
 func main(){
 	Solve("input.txt")
 }
